@@ -1,0 +1,35 @@
+.DragAndDrop{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.DragAndDrop p{
+    width: 100%;
+    text-align: center;
+}
+.DragAndDrop .fileUpload{
+    height: 200px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: relative;
+}
+.DragAndDrop .fileUpload img{
+    width: 100px;
+}
+.DragAndDrop .fileUpload input[type="file"]{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    cursor: pointer;
+}
+

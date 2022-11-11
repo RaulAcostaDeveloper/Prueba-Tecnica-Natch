@@ -1,0 +1,74 @@
+.CarrucelImagenes{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.CarrucelImagenes .carrucel{
+    min-height: 500px;
+}
+.CarrucelImagenes .botones{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CarrucelImagenes .botones button{
+    margin: 5px;
+    padding: 10px;
+
+    background-color: rgb(22, 135, 187);
+    color: rgb(240, 248, 255);
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+.CarrucelImagenes .botones button:active{
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+.CarrucelImagenes img{
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 4px;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+}
+
+
+
+/* ANIMACIÓN   CARRUCEL */
+#siguienteImagenAnimacion {
+    animation-name: siguienteImagenAnimacion;
+    animation-duration: 500ms;
+}
+@keyframes siguienteImagenAnimacion {
+    0% {
+
+        margin-right: 200px;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0px;
+        opacity: 1;
+    }
+}
+#anteriorImagenAnimacion {
+    animation-name: anteriorImagenAnimacion;
+    animation-duration: 500ms;
+}
+@keyframes anteriorImagenAnimacion {
+    0% {
+        margin-left: 200px;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}

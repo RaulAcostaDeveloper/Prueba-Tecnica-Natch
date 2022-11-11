@@ -1,0 +1,20 @@
+.ElementoEmpleado{
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(249, 252, 255);
+
+}
+.ElementoEmpleado div{
+    width: 33%;
+    border: 1px solid black;
+    padding: 2px;
+}
+@media (min-width: 670px) {
+    .ElementoEmpleado{
+        width: 80%;
+        font-size: 15px;
+
+    }
+}
