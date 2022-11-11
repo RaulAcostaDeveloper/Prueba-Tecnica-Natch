@@ -9,19 +9,22 @@ const TablaEmpleados = ({empleados})=>{
     const [filtroNumerico, setFiltroNumerico] = useState(10);
 
     useEffect(()=>{
-        
-            let elementosTemp = empleados.map((el)=>el);
-            elementosTemp = elementosTemp.filter((el)=> (el.name.toLocaleLowerCase().includes(filtroNombre)&&el.id<=filtroNumerico && el.id>=filtroNumerico-10));
-            setElementos(elementosTemp);
+            if (empleados) {
+                let elementosTemp = empleados.map((el)=>el);
+                elementosTemp = elementosTemp.filter((el)=> (el.name.toLocaleLowerCase().includes(filtroNombre)&&el.id<=filtroNumerico && el.id>=filtroNumerico-10));
+                setElementos(elementosTemp);
+            }
      
     },[filtroNombre, filtroNumerico]);
     useEffect(()=>{
-        if (filtroNumerico>0) {
-            let elementosTemp = empleados.map((el)=>el);
-            elementosTemp = elementosTemp.filter((el)=> el.id<=filtroNumerico && el.id>filtroNumerico-10);
-            setElementos(elementosTemp);
-        } else {
-            setElementos(empleados);
+        if (empleados) {
+            if (filtroNumerico>0) {
+                let elementosTemp = empleados.map((el)=>el);
+                elementosTemp = elementosTemp.filter((el)=> el.id<=filtroNumerico && el.id>filtroNumerico-10);
+                setElementos(elementosTemp);
+            } else {
+                setElementos(empleados);
+            }
         }
     },[filtroNumerico]);
     return (
