@@ -8,7 +8,7 @@ De ser necesario, instalar las dependencias
 npm i react-router-dom
 Npm i –S redux
 Npm i –S react-redux
-
+npm install --save-dev @testing-library/react
 Usuario
 admin
 Password
