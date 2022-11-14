@@ -20,7 +20,7 @@ const DragAndDrop = ()=>{
     console.log(archivos);
     return (
         <div className="DragAndDrop">
-            <label class="fileUpload">
+            <label className="fileUpload">
                 <input value={archivo} id='inputFiles' type="file" accept="image/png, image/jpeg, image/jpg" onChange={(e)=>handleArchivo(e)} multiple />
                 <img src='./dragfile.png' alt='Drag file here'/>
             </label>
