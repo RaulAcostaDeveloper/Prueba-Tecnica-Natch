@@ -30,7 +30,7 @@ const TablaEmpleados = ({empleados})=>{
     return (
         <div className="TablaEmpleados">
             <BuscadorEmpleados filtroNombre={filtroNombre} setFiltroNombre={setFiltroNombre}/>
-            <FiltroNumericoEmpleados filtroNumerico={filtroNumerico} setFiltroNumerico={setFiltroNumerico}/>
+            <FiltroNumericoEmpleados numElementos={empleados.length} filtroNumerico={filtroNumerico} setFiltroNumerico={setFiltroNumerico}/>
 
             <div className="HeaderTabla">
                 <div>Nombre</div>

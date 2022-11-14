@@ -23,7 +23,6 @@ const Employees =()=>{
         });
         console.log('fetching');
     },[fetchAgain]);
-
     const cumpleValidaciones = (data) => {
         // Validaciones
         if (data.nombre.length<=3) {

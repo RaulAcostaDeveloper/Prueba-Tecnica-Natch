@@ -1,19 +1,29 @@
+import { useEffect, useState } from 'react';
 import './Styles/BuscadorEmpleados.css';
 
-const FiltroNumericoEmpleados = ({filtroNumerico, setFiltroNumerico})=>{
+const FiltroNumericoEmpleados = ({numElementos, filtroNumerico, setFiltroNumerico})=>{
+    const [insideSelect, setInsideSelect] = useState('');
+    useEffect(()=>{
+        let cantidadElementos = Math.ceil(numElementos/10); //Número de décimos (paginación)
+        let opcionHtml='';
+        let opcionesHtml = [];
+        for (let index = 1; index < cantidadElementos + 1; index++) {
+            let sup = index*10;
+            let inf = sup-10;
+            opcionHtml = ()=>{
+                return (
+                    <option value={sup}>{inf}-{sup}</option>
+                )
+            }
+            opcionesHtml = opcionesHtml.concat(opcionHtml());
+        }
+        setInsideSelect(opcionesHtml);
+    },[numElementos]);
     return (
         <div className="BuscadorEmpleados"> 
             <p>Paginación</p>
             <select value={filtroNumerico} onChange={(e)=>setFiltroNumerico(e.target.value)} >
-                <option value={10}>0-10</option>
-                <option value={20}>10-20</option>
-                <option value={30}>20-30</option>
-                <option value={40}>30-40</option>
-                <option value={50}>40-50</option>
-                <option value={60}>50-60</option>
-                <option value={70}>60-70</option>
-                <option value={80}>70-80</option>
-
+                {insideSelect}
             </select>
         </div>
     )
